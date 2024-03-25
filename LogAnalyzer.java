@@ -115,57 +115,65 @@ public class LogAnalyzer
         }
     }
     
+    /**
+     * This will print out and tell you when is the busiest hour.
+     */
     public void busiestHour()
     {
-        //This will print out and tell you when is the busiest hour.
-        int busiest = 0;
+        int busy = 0;
         int hour = 0;
         for(int i = 0; i < hourCounts.length; i++)
         {
-            if(dayCounts[i] > busiest)
+            if(dayCounts[i] > busy)
             {
-                busiest = hourCounts[i];
+                busy = hourCounts[i];
                 hour = i;
             }
         }
         System.out.println("Busiest hour is " + hour + ".");
     }
     
+    /**
+     * This will print out and tell you when is the busiest day.
+     */
     public void busiestDay()
     {
-        //This will print out and tell you when is the busiest day.
-        int busiest = 0;
+        int busy = 0;
         int day = 0;
         for(int i = 0; i < dayCounts.length; i++)
         {
-            if(dayCounts[i] > busiest)
+            if(dayCounts[i] > busy)
             {
-                busiest = dayCounts[i];
+                busy = dayCounts[i];
                 day = i;
             }
         }
         System.out.println("Busiest hour is " + day + ".");
     }
     
+    /**
+     * This will print out and tell you when is the busiest month.
+     */
     public void busiestMonth()
     {
-        //This will print out and tell you when is the busiest month.
-        int busiest = 0;
+        int busy = 0;
         int month = 0;
         for(int i = 0; i < monthCounts.length; i++)
         {
-            if(monthCounts[i] > busiest)
+            if(monthCounts[i] > busy)
             {
-                busiest = monthCounts[i];
+                busy = monthCounts[i];
                 month = i;
             }
         }
         System.out.println("Busiest hour is " + month + ".");
     }
     
+    /**
+     * This will print out and tell you when is the quietest hour.
+     */
     public void quietestHour()
     {
-        //This will print out and tell you when is the quietest hour.
         int quiet = hourCounts[0];
         int hour = 0;
         for(int i = 0; i < hourCounts.length; i++)
@@ -179,9 +187,11 @@ public class LogAnalyzer
         System.out.println("Quietest hour is " + hour + ".");
     }
     
+    /**
+     * This will print out and tell you when is the quietest hour.
+     */
     public void quietestDay()
     {
-        //This will print out and tell you when is the quietest hour.
         int quiet = dayCounts[0];
         int day = 0;
         for(int i = 0; i < dayCounts.length; i++)
@@ -195,9 +205,11 @@ public class LogAnalyzer
         System.out.println("Quietest day is " + day + ".");
     }
     
+    /**
+     * This will print out and tell you when is the quietest hour.
+     */
     public void quietestMonth()
     {
-        //This will print out and tell you when is the quietest hour.
         int quiet = monthCounts[0];
         int month = 0;
         for(int i = 0; i < monthCounts.length; i++)
@@ -211,9 +223,11 @@ public class LogAnalyzer
         System.out.println("Quietest month is " + month + ".");
     }
     
+    /**
+     * This code will tell you when are the two busiest hours.
+     */
     public void busiestTwoHour()
     {
-        //This code will tell you when are the two busiest hours.
         int busiest = 0;
         int hourOne = 0;
         int hourTwo = 0;
@@ -229,9 +243,11 @@ public class LogAnalyzer
         System.out.println("The two busietst hours are " + hourOne + " and " + hourTwo + ".");
     }
     
+    /**
+     * This code would tell you the total access per month
+     */
     public void totalAccessPerMonth()
     {
-        // This code would tell you the total access per month
         System.out.println("Month: Counts");
         int total = 0;
         for(int i = 0; i < monthCounts.length; i++)
@@ -242,9 +258,11 @@ public class LogAnalyzer
         System.out.println("Total: "+ total);
     }
     
+    /**
+     * This code would tell you the total access per month
+     */
     public void averageAccessPerMonth()
     {
-        // This code would tell you the total access per month
         System.out.println("Month: Average");
         int total = 0;
         analyzeMonthlylyData();
